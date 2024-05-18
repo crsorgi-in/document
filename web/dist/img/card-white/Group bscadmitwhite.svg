@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 225"
+	 style="enable-background:new 0 0 400 225;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#CCCCCC;}
+	.st1{fill:none;stroke:#231F20;stroke-width:2.36;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.6131;}
+	.st2{fill:#231F20;}
+	.st3{font-family:'TiroDevaHindi-Regular';}
+	.st4{font-size:50px;}
+</style>
+<rect class="st0" width="400" height="225"/>
+<path id="card" class="st1" d="M164.7,142.9h72.5c5,0,9.1,4.1,9.1,9.1v42.3c0,5-4.1,9.1-9.1,9.1h-72.5c-5,0-9.1-4.1-9.1-9.1V152
+	C155.6,147,159.7,142.9,164.7,142.9z"/>
+<path class="st2" d="M183.8,177c7.3,0,13.2-5.9,13.2-13.2c0-7.3-5.9-13.2-13.2-13.2c-7.3,0-13.2,5.9-13.2,13.2
+	C170.7,171,176.6,177,183.8,177z M161.9,203.4c0,0-4.4,0-4.4-4.4c0-4.4,4.4-17.6,26.4-17.6c22,0,26.4,13.2,26.4,17.6
+	c0,4.4-4.4,4.4-4.4,4.4H161.9L161.9,203.4L161.9,203.4z"/>
+<path class="st2" d="M207,162.1c0-0.9,0.8-1.7,1.9-1.7h26.6c1.1,0,1.9,0.7,1.9,1.7c0,0.9-0.8,1.7-1.9,1.7h-26.6
+	C207.8,163.8,207,163.1,207,162.1z"/>
+<path class="st2" d="M207.4,173.8c0-0.9,0.8-1.7,1.9-1.7H236c1.1,0,1.9,0.7,1.9,1.7c0,0.9-0.8,1.7-1.9,1.7h-26.7
+	C208.2,175.5,207.4,174.8,207.4,173.8z"/>
+<path class="st2" d="M210.4,185.6c0-0.9,0.8-1.5,1.7-1.5h24c1,0,1.7,0.7,1.7,1.5c0,0.8-0.8,1.5-1.7,1.5h-24
+	C211.1,187.1,210.4,186.4,210.4,185.6z"/>
+<text transform="matrix(1 0 0 1 76.12 61.81)" class="st2 st3 st4">B.Sc Admit </text>
+<text transform="matrix(1 0 0 1 145.57 125.49)" class="st2 st3 st4">Card</text>
+</svg>
