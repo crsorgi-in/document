@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap');
+
+.error-box{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main{
+    position: absolute;
+    top: 170px;
+}
+.main-area{
+    padding: 0 150px 0 150px;
+}
+
+body{
+    background-color: #E9FDFF;
+}
+
+.error-code{
+    font-size: 80px;
+    font-family: "Palanquin Dark", sans-serif;
+    line-height: 0.8;
+    margin: 0;
+    font-weight: 700;
+    color: #6666f3;
+    
+
+}
+
+.error-msg{
+    font-family: 'Open Sans', sans-serif;
+    color: #6666f3;
+}
+
+.error-pic{
+    width: 750px;
+    float: right;
+}
+
+@media (min-width: 300px){
+   
+    .error-pic{
+        float: none;
+        padding-top: 20px;
+    }
+    .main-area{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        padding-top:290px;
+    }
+
+}
+
+@media (min-width: 424px){
+   
+    .error-pic{
+        float: none;
+    }
+    .main-area{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+       padding-top: 280px;
+    }
+
+}
+
+@media (min-width: 550px){
+   
+    .error-pic{
+        float: none;
+    }
+    .main-area{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+       display: none;
+    }
+
+}
+
+@media (min-width: 768px){
+   
+    .error-pic{
+        float: none;
+        width: 650px;
+      
+    }
+    .main-area{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        position: absolute;
+        right: 50%;
+        margin: 130px;
+        top: 0;
+
+    }
+
+}
+
+@media (min-width: 1200px){
+   
+    .error-pic{
+        float: right;
+        width: 600px;
+        padding-right: 100px;
+    }
+    .main-area{
+        padding: 0;
+        display: block;
+    }
+    .main{
+        position: absolute;
+        right: 70%;
+        display: flex;
+        margin: 0;
+        padding: 235px 0 0 0;
+    }
+
+}

@@ -1,0 +1,44 @@
+.DocSearch-Modal {
+  display: none;
+  position: fixed;
+  background: rgba(55, 22, 91, 0.836);
+  align-items: center;
+  z-index: 2000;
+  width: 100%;
+  max-width: 100%;
+  /* animation: scaleFadeInOut 0.5s ease-in-out; */
+  margin: 0;
+}
+
+/* Additional styles to center the modal */
+.DocSearch-SearchBar {
+  /* Your existing styles here */
+  padding: 8px;
+  display: flex;
+  /* animation: slideIn 0.5s ease-in-out; */
+}
+
+
+/* @keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleFadeInOut {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+
+

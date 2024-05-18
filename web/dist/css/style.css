@@ -1,0 +1,68 @@
+#progress-bar {
+  background-color: #ff0000;
+}
+
+.card {
+  background-color: var(--background-light);
+}
+
+main {
+  background: var(--background-light);
+  transition: background 2s ease;
+}
+
+[data-bs-theme="dark"] main {
+  background: var(--background-dark);
+  background-position: center;
+  transition: background 2s ease;
+}
+
+footer{
+  background: url(/web/dist/img/background/new\ footer\ dark.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+[data-bs-theme ="light"] footer{
+  background: url(/web/dist/img/background/new\ footer\ light.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  transition: background 2s ease;
+}
+
+
+/* footer {
+  background-image: var(--foter-light);
+  background-position: top;
+  transition: background 2s ease;
+}
+[data-bs-theme="dark"] footer {
+  background-image: var(--foter-dark);
+  background-position: top;
+  transition:background 1s ease;
+  
+} */
+
+[data-bs-theme= "dark"] .chotu{
+  background-color: #7979798b;
+}
+
+ .white {
+  display: block;
+}
+
+[data-bs-theme= "light"]  .dark {
+  display: none;
+}
+
+.dark{
+  display: block;
+}
+
+[data-bs-theme="dark"] .white {
+  display: none;
+}
+
+
+#captchaInput:disabled {
+  cursor: not-allowed;
+}
