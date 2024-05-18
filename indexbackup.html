@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <script src="/web/dist/js/color-modes.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>My Personal Document</title>
+    <link href="/web/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/web/dist/css/placeholder.css" rel="stylesheet" />
+    <link href="/web/dist/css/style.css" rel="stylesheet" />
+    <link href="/web/dist/css/css@3.css" rel="stylesheet" />
+    <link href="/web/dist/css/docs.css" rel="stylesheet" />
+    <link href="/web/dist/css/searchmodal.css" rel="stylesheet" />
+    <link href="/web/dist/css/cssanimation.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="/web/dist/img/favicon/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+
+    <script src="/web/dist/js/jquery.slim.min.js"></script>
+    <script src="/web/dist/js/popper.min.js"></script>
+    <script src="/web/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/web/dist/js/script.js"></script>
+    <script src="/web/dist/js/searchcard.js"></script>
+    <script src="/web/dist/js/realtime.js"></script>
+    <script src="/web/dist/js/imgpreview.js"></script>
+    <script src="/web/dist/js/captcha&dwnfil.js"></script>
+    <script src="/web/dist/js/theme.js"></script>
+    <script src="/web/dist/js/searchmodal.js"></script>
+    <script src="/web/dist/js/animation.js"></script>
+    <script src="/web/dist/js/error.js"></script>
+
+    <script language=JavaScript>
+        var message = "Right Click Function Disabled!";
+
+        function clickIE4() {
+            if (event.button == 2) {
+                alert(message);
+                return false;
+            }
+        }
+
+        function clickNS4(e) {
+            if (document.layers || document.getElementById && !document.all) {
+                if (e.which == 2 || e.which == 3) {
+                    alert(message);
+                    return false;
+                }
+            }
+        }
+
+        if (document.layers) {
+            document.captureEvents(Event.MOUSEDOWN);
+            document.onmousedown = clickNS4;
+        }
+        else if (document.all && !document.getElementById) {
+            document.onmousedown = clickIE4;
+        }
+
+        document.oncontextmenu = new Function("alert(message);return false")
+
+    </script>
+
+    <!-- 
+    <script>
+        document.onkeydown = function (e) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script> -->
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed mb-3 ms-3 bottom-0 start-0 bd-mode-toggle">
+        <button class="btn btn-bd-primary  py-2 d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button disabled type="button" class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar fixed-top navbar-expand-sm  bg-body-secondary shadow-sm d-flex "
+            aria-label="offcanvas navbar large">
+            <div class="container-fluid">
+                <a href="/index.html" class="navbar">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40" class="rounded-top-2 dark" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 302.62 461.16">
+                        <g style="clip-path: url(#id0)">
+                            <image x="-0" y="-0" width="100%" height="100%"
+                                xlink:href="/web/dist/img/card-black/white logo sb.svg" />
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40" class="rounded-top-2 white" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 302.62 461.16">
+                        <g style="clip-path: url(#id0)">
+                            <image x="-0" y="-0" width="100%" height="100%"
+                                xlink:href="/web/dist/img/card-black/white logo sb black.svg" />
+                        </g>
+                    </svg>
+                </a>
+
+
+                <!-- offcanvas start  -->
+                <div class="offcanvas offcanvas-end text-bg" tabindex="-1" id="offcanvasNavbarDark"
+                    aria-labelledby="offcanvasNavbarDarkLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Contact Us</h5>
+                        <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav flex-grow-1 ms-3 pe-3">
+                            <li class="nav-item">
+
+                                <a class="nav-link active" aria-current="page" href="/index.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-house-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                                        <path
+                                            d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                                    </svg>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                    </svg> About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </svg>
+                                    Contact
+                                </a>
+                                <ul class="dropdown-menu cssanimation swingInRight ">
+                                    <ul class="list-unstyled d-flex justify-content-around align-items-center ">
+                                        <li class=" ">
+                                            <a href="" class="text-body"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" fill="currentColor" class="bi bi-facebook"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="ms-3">
+                                            <a href="" class="text-body"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" fill="currentColor" class="bi bi-instagram"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="ms-3">
+                                            <a href="" class="text-body"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" fill="currentColor"
+                                                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/modal.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" class="bi bi-globe2"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                                    </svg>
+                                    Old Website</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
+          <input class="form-control border-3" type="search" placeholder="Search (&#8985;+k)" id="searchInput" />
+        </div> -->
+                <div class="d-flex">
+                    <div class="bd-search" id="docsearch" data-bd-docs-version="5.3">
+                        <button type="button" class="DocSearch DocSearch-Button" aria-label="Search" id="showSearchBar">
+                            <span class="DocSearch-Button-Container">
+                                <svg width="20" height="20" class="DocSearch-Search-Icon text-body" viewBox="0 0 20 20"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                                        stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <span
+                                    class="DocSearch-Button-Placeholder text-body cssanimation leZoomInRight sequence">Search
+                                    Document</span>
+                            </span>
+                            <span class="DocSearch-Button-Keys chotu">
+                                <kbd class="DocSearch-Button-Key text-body">
+                                    <svg width="15" height="15" class="DocSearch-Control-Key-Icon">
+                                        <path
+                                            d="M4.505 4.496h2M5.505 5.496v5M8.216 4.496l.055 5.993M10 7.5c.333.333.5.667.5 1v2M12.326 4.5v5.996M8.384 4.496c1.674 0 2.116 0 2.116 1.5s-.442 1.5-2.116 1.5M3.205 9.303c-.09.448-.277 1.21-1.241 1.203C1 10.5.5 9.513.5 8V7c0-1.57.5-2.5 1.464-2.494.964.006 1.134.598 1.24 1.342M12.553 10.5h1.953"
+                                            stroke-width="1.2" stroke="currentColor" fill="none"
+                                            stroke-linecap="square"></path>
+                                    </svg>
+                                </kbd>
+                                <kbd class="DocSearch-Button-Key text-body ">+ K</kbd>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <button class="navbar-toggler border-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarDark" aria-controls="navbarHeader" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="DocSearch-Modal cssanimation pushReleaseFromTop" id="searchModal">
+            <header class="DocSearch-SearchBar ">
+                <form class="DocSearch-Form">
+                    <svg width="20" height="20" class="DocSearch-Search-Icon DocSearch-MagnifierLabel"
+                        viewBox="0 0 20 20" aria-hidden="true">
+                        <path
+                            d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                            stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="DocSearch-VisuallyHiddenForAccessibility">Search</span>
+                    <input class="DocSearch-Input" aria-autocomplete="both" id="searchInput" autocomplete="off"
+                        autocorrect="off" autocapitalize="off" spellcheck="false" autofocus="true"
+                        placeholder="Search docs" maxlength="64" type="text">
+                    <button type="reset" title="Clear the query" class="DocSearch-Reset" aria-label="Clear the query"
+                        hidden="">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
+                                stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </form>
+                <button class="DocSearch-Cancel text-white" type="reset" id="hideSearchBar"
+                    aria-label="Cancel">Cancel</button>
+            </header>
+        </div>
+        <main>
+            <section class="py-5"></section>
+
+            <div class="album py-3">
+                <div id="noMatchMessage" class="alert alert-warning cssanimation pushReleaseFromTop"
+                    style="display: none">
+                    <strong>Nothing found,</strong> try searching again
+                </div>
+
+
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 gn-xxl-5 g-3">
+                        <!-- start -->
+                        <div class="col">
+                            <div class="card shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                    class="rounded-top-2 dark" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 1333.33 749.99">
+                                    <g style="clip-path: url(#id0)">
+                                        <image x="-0" y="-0" width="100%" height="100%"
+                                            xlink:href="/web/dist/img/card-black/Group 1aadhaarcardblack.svg" />
+                                    </g>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                    class="rounded-top-2 white" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 1333.33 749.99">
+                                    <g style="clip-path: url(#id0)">
+                                        <image x="-0" y="-0" width="100%" height="100%"
+                                            xlink:href="/web/dist/img/card-white/Group aadhaarwhite.svg" />
+                                    </g>
+                                </svg>
+                                <div class="card-body">
+                                    <p class="card-text">Aadhaar Card</p>
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-secondary view-button"
+                                            data-bs-toggle="modal" data-bs-target="#myModal"
+                                            data-src="/dist/img/preview-img/B.Sc Admit Card copy.jpg">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary download-button"
+                                            data-bs-toggle="modal" data-bs-target="#pdfModal"
+                                            data-file="Sudhanshu Bhushan Aadhaar.pdf">Download pdf</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between text-muted">
+                                    <small class="">Last Updated On :</small>
+                                    <small class="time" data-target="2024-02-24T15:00:00"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- start -->
+                        <div class="col">
+                            <div class="card shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                    class="rounded-top-2 dark" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 1333.33 749.99">
+                                    <g style="clip-path: url(#id0)">
+                                        <image x="-0" y="-0" width="100%" height="100%"
+                                            xlink:href="/web/dist/img/card-black/Group 1bscadmitblack.svg" />
+                                    </g>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                    class="rounded-top-2 white" version="1.1" style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality;
+                fill-rule: evenodd; clip-rule: evenodd;" viewBox="0 0 1333.33 749.99">
+                                    <g style="clip-path: url(#id0)">
+                                        <image x="-0" y="-0" width="100%" height="100%"
+                                            xlink:href="/web/dist/img/card-white/Group bscadmitwhite.svg" />
+                                    </g>
+                                </svg>
+                                <div class="card-body">
+                                    <p class="card-text">Bsc Admit Card</p>
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-secondary view-button"
+                                            data-bs-toggle="modal" data-bs-target="#myModal"
+                                            data-src="/web/dist/img/preview-img/B.Sc Admit Card copy.jpg">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary download-button"
+                                            data-bs-toggle="modal" data-bs-target="#pdfModal"
+                                            data-file="B.Sc Admit Card.pdf">Download
+                                            pdf</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between text-muted">
+                                    <small class="">Last Updated On :</small>
+                                    <small class="time" data-target="2024-02-24T18:00:00"></small>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- download modal start -->
+
+                        <div class="modal fade " data-bs-backdrop="static" data-bs-keyboard="false" id="pdfModal"
+                            tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="pdfModalLabel">Download PDF</h5>
+                                        <button type="button" class="btn " data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body" style="text-align: left">
+                                        <p>Solve the captcha:</p>
+                                        What is
+                                        <span id="captchaContainer"></span>
+
+                                        <input type="text" class="form-control mt-2" id="captchaInput"
+                                            placeholder="Enter Captcha" />
+                                        <div id="alertContainer" class="mt-2"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-outline-primary" id="verifyButton"
+                                            onclick="verifyCaptcha()">
+                                            Verify Captcha
+                                        </button>
+                                        <button type="button" class="btn btn-outline-success" id="downloadLink" download
+                                            style="display: none" onclick="downloadFile()">
+                                            Download
+                                        </button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- download modal end -->
+
+                        <!-- Image Modal start -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Image Viewer</h5>
+                                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Add an ID to the image tag to update its source dynamically -->
+                                        <img id="modal-image" class="img-fluid" alt="Image" />
+                                        <div class="progress mt-3">
+                                            <div id="progress-bar" class="progress-bar" role="progressbar"
+                                                style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image Modal End -->
